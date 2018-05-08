@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+	<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Hospital Dashboard"/>
+		<meta name="keywords" content="Dashboard"/>
+		<title> Hospital Reminder </title>		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+				<!-- css files -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+	    <link rel="stylesheet" href="../fonts/icomoon/icomoon.css"/>
+		<link rel="stylesheet" href="../css/stylesheet.css">
+		<link rel="stylesheet" href="../css/main.css">
+
+			<!-- 	//table css -->
+		<link rel="stylesheet" href="../css/dataTables.css">
+		<link rel="stylesheet" href="../css/dataTables2.css">
+
+</head>
+	<body>
+		<!-- BEGIN .app-wrap -->
+		<div class="app-wrap">
+			<header class="app-header">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-8">
+							<a href="#" class="logo">
+								<img src="img/unify.png" alt="Unify Admin Dashboard">
+							</a>
+							<a class="mini-nav-btn" href="#" id="app-side-mini-toggler">
+								<i class="icon-sort"></i>
+							</a>
+							<a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded="true">
+								<i class="icon-chevron-thin-left"></i>
+							</a>
+						</div>
+
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4">
+							<ul class="header-actions">					
+								<li class="dropdown">
+									<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+										<img class="avatar" src="../img/user.png" alt="User Thumb">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- END: .app-headng -->
+			<!-- BEGIN: .app-container -->
+			<div class="app-container">
+				<!-- BEGIN .app-side -->
+				<aside class="app-side" id="app-side">
+					<!-- BEGIN .side-content -->
+					<div class="side-content ">
+						<!-- BEGIN .user-profile -->
+						<div class="user-profile">
+							<img src="../img/user.png" class="profile-thumb" alt="User Thumb">
+							<h6 class="profile-name"> Welcome <span class="actName" name="actName"> </span> </h6>
+
+						</div>
+						<!-- END .user-profile -->
+						<!-- BEGIN .side-nav -->
+						<nav class="side-nav">
+							<!-- BEGIN: side-nav-content -->
+							<ul class="unifyMenu" id="unifyMenu">
+								<li class="">
+									<a href="dashboard.html" class="nav-href" >
+										<span class="has-icon">
+											<i class="icon-laptop_windows"></i>
+										</span>
+										<span class="nav-title">Dashboard</span>
+									</a>
+								</li>
+								<li>
+									<!-- it will have a page that has a plus icon to add new hospital -->
+									<a href="hospitals.html" class="has-arrow">
+										<span class="has-icon">
+											<i class="icon-home"></i>
+										</span>
+										<span class="nav-title">Hospitals</span>
+									</a>
+									<ul aria-expanded="false" class="collapse">
+										<li>
+											<a class="nav-href" href="hospitals.html"> View Hospitals </a>
+										</li>
+									</ul>
+								</li>
+								<li class="active selected">
+									<a href="#" class="has-arrow" aria-expanded="false">
+										<span class="has-icon">
+											<i class="icon-people"></i>
+										</span>
+										<span class="nav-title"> Users </span>
+									</a>
+									<ul aria-expanded="false" class="collapse">
+										<li>
+											<a href="viewuser.html" class="current-page nav-href">
+												View Users
+											</a>
+										</li>
+										<li>
+											<a class="nav-href" href="adduser.html"> Add New User </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="nav-href" href="changepswd.html">
+										<span class="has-icon">
+											<i class="icon-lock_outline"></i>
+										</span>
+										<span class="nav-title"> Change Password </span>
+									</a>
+								</li>
+								<li>
+									<a class="nav-href" href="#">
+										<span class="has-icon">
+											<i class="icon-textsms"></i>
+										</span>
+										<span class="nav-title">Stop SMS </span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="has-icon">
+											<i class="icon-chart-area-outline"></i>
+										</span>
+										<span class="nav-title">Reports</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" id="logOut">
+										<span class="has-icon">
+											<i class="icon-lock_outline"></i>
+										</span>
+										<span class="nav-title">Logout</span>
+									</a>
+								</li>
+							</ul>
+							<!-- END: side-nav-content -->
+						</nav>
+						<!-- END: .side-nav -->
+					</div>
+					<!-- END: .side-content -->
+				</aside>
+				<!-- END: .app-side -->
+
+				<!-- BEGIN .app-main -->
+				<div class="app-main">
+					<!-- BEGIN .main-heading -->
+					<header class="main-heading">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+									<div class="page-icon">
+										<i class="icon-laptop_windows"></i>
+									</div>
+									<div class="page-title">
+										<h5> ALL Users </h5>
+										<h6 class="sub-heading">Welcome Back <span class="actName" name="actName"> </span> </h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<!-- END: .main-heading -->
+					<!-- BEGIN .main-content --> 
+					<div class="main-content">
+						<!-- Row start -->
+						<div class="row gutters">
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+								<div class="card">
+									<div class="card-body userCard">
+												   <div class="row">
+												<div class="col-sm-12">
+													<table id="userTable" class="table userTable">
+													<thead>
+														<tr>
+															
+																<td> Hospital Name </td>
+																<td> User Type </td>
+																<td> Username </td>
+																<td> Actions </td>
+														</tr>
+													</thead>
+													<tbody>	
+														
+													</tbody>
+												   </table>
+												</div>		
+											 </div>
+										</div>
+									</div>
+									<!-- end of card -->
+								</div>
+							</div>
+							
+						</div>
+						<!-- Row end -->
+					</div>
+					<!-- END: .main-content -->
+				</div>
+				<!-- END: .app-main -->	
+
+			</div>
+			<!-- END: .app-container -->
+			<!-- alert message -->
+		<div class="alertMsg" id="alertMsg">
+					<div class="alert alert-warning">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+						</button>
+						<i class="icon-warning2"></i><p name="alertMsg">  </p>
+					</div>
+		</div>
+		<div class="alertMsg" id="alertMsg2">
+					<div class="alert alert-success">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+						</button>
+						<i class="icon-tick"></i><p name="alertMsg">  </p>
+					</div>
+		</div>
+			<!-- BEGIN .main-footer -->
+			<footer class="main-footer fixed-btm">
+				Copyright Hospital 2018.
+			</footer>
+			<!-- END: .main-footer -->
+		</div>
+		<!-- END: .app-wrap -->
+
+		<!-- jQuery first, then other JS. -->
+		<script src="../js/jquery.js"></script>
+		<script src="../js/tether.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/onoffCanvas.js"></script>
+		<script src="../js/unifyMenu.js"></script>
+		<script src="../js/moment.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/cookie.js"></script>
+		<script src="../js/dataTables.min.js"></script>
+		<script src="../js/dataTables.bootstrap.min.js"></script>
+
+		<!-- to be loaded last  -->
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+
+			var tab; 
+			 $(document).ready(function(){
+            
+           tab = $("#userTable").DataTable({
+
+              "destroy":"true",
+              "ajax": { "url":"http://hospitals.reminderz.ng/demo_api/functions?getAllHUsers", "dataSrc": "data" },
+               "columns": [
+                  { "data": "hospitalName" },
+                  { "data": "acct_type" },
+                  { "data": "username" },
+                  { "data": null,
+            "defaultContent":"<span data-toggle='tooltip' data-placement='bottom' title='' data-original-title='Reset Password'> <a id='resetPwd'><i class='icon-loop2'></i></a></span>   <span data-toggle='tooltip' data-placement='bottom' title='' data-original-title='Remove User'> <a><i class='icon-cross'></i></a> </span>"}
+
+              ],
+               "pageLength":25,
+                "pagingType": "simple",
+                 "order": [[ 0, 'asc' ]],
+                 "lengthChange": false
+          });
+
+          $('#userTable tbody').on( 'click','a#resetPwd', function () {
+        var data = tab.row( $(this).parents('tr')).data();
+          resetPwd(data.UserID);
+    } );
+
+
+			 });
+
+		</script>
+	</body>
+</html>
